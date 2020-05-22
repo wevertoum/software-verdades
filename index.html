@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+  .container {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgb(119, 77, 119), rgb(68, 74, 158));
+    position: absolute;
+  }
+
+  .conteudo {
+    background-color: rgb(226, 172, 172);
+    border-radius: 20px;
+    height: 300px;
+    width: 600px;
+
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+
+  .text {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+
+  .titulo {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .sabedoria {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <div class="conteudo">
+      <div class="text">
+        <div class="titulo">
+          O SOFTWARE DAS VERDADES
+        </div>
+        <div class="sabedoria">
+          <p id="sabedoriaText"></p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</body>
+
+<script>
+  const arr1 = [
+    "banana",
+    "laranja",
+    "casamento",
+    "orquidea",
+    "bolsonaro",
+    "vontade",
+    "coracao",
+    "alface",
+    "tubarao",
+    "turbina"
+  ]
+
+  const arr2 = [
+    "de",
+    "do",
+    "da",
+    "por",
+    "comeu",
+    "deduziu",
+    "consquistou",
+    "apresentou"
+  ]
+
+  const arr3 = [
+    "girassol",
+    "pudim",
+    "copo",
+    "matemática",
+    "morango",
+    "amendoim",
+    "calculadora",
+    "patins",
+    "skate",
+    "acidente",
+    "patins",
+    "Entschuldigen",
+    "Vier",
+    "Zwanzig",
+    "Falafels"
+  ]
+
+
+  setInterval(
+    function () {
+      let palavra1 = arr1[Math.floor(Math.random() * (Math.ceil(10) - Math.ceil(1))) + Math.ceil(1)]
+      let palavra2 = arr2[Math.floor(Math.random() * (Math.ceil(8) - Math.ceil(1))) + Math.ceil(1)]
+      let palavra3 = arr3[Math.floor(Math.random() * (Math.ceil(15) - Math.ceil(1))) + Math.ceil(1)]
+
+      let txt = document.getElementById("sabedoriaText").innerHTML = (`${palavra1} ${palavra2} ${palavra3}`)
+    }, 2000);
+
+</script>
+
+</html>
