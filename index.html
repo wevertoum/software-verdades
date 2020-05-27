@@ -140,9 +140,9 @@
 
   setInterval(
     function () {
-      let palavra1 = arr1[Math.floor(Math.random() * (Math.ceil(10) - Math.ceil(1))) + Math.ceil(1)]
-      let palavra2 = arr2[Math.floor(Math.random() * (Math.ceil(8) - Math.ceil(1))) + Math.ceil(1)]
-      let palavra3 = arr3[Math.floor(Math.random() * (Math.ceil(15) - Math.ceil(1))) + Math.ceil(1)]
+      let palavra1 = arr1[Math.floor(Math.random() * (Math.ceil(arr1.length) - Math.ceil(1))) + Math.ceil(1)]
+      let palavra2 = arr2[Math.floor(Math.random() * (Math.ceil(arr2.length) - Math.ceil(1))) + Math.ceil(1)]
+      let palavra3 = arr3[Math.floor(Math.random() * (Math.ceil(arr3.length) - Math.ceil(1))) + Math.ceil(1)]
 
       let txt = document.getElementById("sabedoriaText").innerHTML = (`${palavra1} ${palavra2} ${palavra3}`)
     }, 2000);
